@@ -206,21 +206,25 @@ fill: var(--accent-color)
 
 .button-main {
   display: block;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 200px;
+  height: 50px;
   background-color: var(--accent-color);
   border-radius: 4px;
   border: 4px var(--accent-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0,25);
   color: var(--white-text);
-  padding: 10px 32px;
   letter-spacing: 1px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   line-height: 1.63;
   font-weight: 700;
-  margin-top: 30px;
+ 
   
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
   box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -559,7 +563,8 @@ margin-right: 30px;
 .title-footer-social-icons{
 text-transform: uppercase;
 font-size: 14px;
-letter-spacing: 1px;
+font-weight: 700;
+letter-spacing: 0.03em;
 line-height: 1.17;
 }
 .footer-social-icons{
@@ -605,6 +610,52 @@ line-height: 1.17;
   background-color: var(--accent-color);
 }
 
+/*форма подписки в футере*/
+.form-footer{
+  display: flex;
+  margin-left: 92px;
+}
+.form-footer-title-input{
+  width: 358px;
+  margin-right: 12px;
+}
+.form-footer-title{
+text-transform: uppercase;
+font-size: 14px;
+font-weight: 700;
+letter-spacing: 0.03em;
+line-height: 1.17;
+}
+
+.form-footer input{
+  margin-top: 20px;
+  padding-left: 16px;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 16px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--white-text);
+
+}
+.form-footer input::placeholder{
+  font-size: 16px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-footer .button-main{
+  margin: 0;
+  display: flex;
+  align-self: flex-end;
+  padding-left: 29px;
+}
+.footer-icon-send{
+  margin-left: 10px;
+}
 /*страница портфолио*/
 .section-portfolio{
   padding-top: 94px;
@@ -698,8 +749,6 @@ line-height: 1.17;
   .projects-list .link:focus .overlay-text{
   transform: translateY(-100%);
   }
-
-
 .projects-list{
 display: flex;  
 flex-wrap: wrap;
@@ -797,4 +846,147 @@ img {
   justify-content: center; 
   align-items: center;
 }
+.button-modal-close:hover .img-close,
+.button-modal-close:focus .img-close{
+  fill: var(--accent-color)
+}
+
+
+/*форма модалки*/
+.form{
+  width: 448px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.title-modal-form{
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  line-height: 1.17;
+}
+.form-list{
+  margin-top: 12px;
+}
+.form-list > .form-item  {
+margin-top: 10px;
+}
+.form-item{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.form-item label{
+  margin-bottom:4px;
+  color:rgba(117, 117, 117, 1);
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  line-height: 1.17;
+}
+.form-item .input-form-modal{
+  margin: 0;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.input-form-modal:focus,
+.input-form-modal:hover{
+outline: none/*1px solid #2196F3*/;
+border: 1px solid #2196F3;
+}
+.input-form-modal:focus + .form-modal-icon,
+.input-form-modal:hover + .form-modal-icon{
+  fill: var(--accent-color);
+  }
+.form-modal-icon{
+  position: absolute;
+  left: 12px;
+  bottom: 11px; 
+}
+.form-item-textarea{
+  resize: none;
+  margin: 0;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-item-textarea:hover,
+.form-item-textarea:focus{
+  outline: none;
+  border: 1px solid #2196F3;
+}
+.form-item textarea::placeholder{
+  color:rgba(117, 117, 117, 0.5);
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  line-height: 1.17;
+}
+.form-item-agreement{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  color:rgba(117, 117, 117, 1);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  line-height: 1.17;
+}
+/*.form-item-agreement input[type='checkbox']{
+  width: 40px;
+  height: 40px;
+}*/
+.link-agreement{
+  color:rgba(33, 150, 243, 1);
+  text-decoration: underline;
+}
+/*кастомный checkbox*/
+/*1.скрываем checkbox от браузера*/
+.checkbox-agreement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.form-label-agreement{
+  padding-left: 15px;
+}
+.icon-checkbox{
+  position: absolute;
+  display: block;
+  width:21px;
+  height:20px;
+  margin-left: -25px;
+  background-image: url(../imeges/unchecked.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.checkbox-agreement:checked + .icon-checkbox {
+  transform: scale(1.2);
+  border-color: transparent;
+  border-radius: 2px;
+  width:16px;
+  height:15px;
+  background-color: #0486f0ec;
+  background-image: url('../imeges/check.svg');
+  background-size: contain;
+  background-origin: border-box;
+}
+.form-label-agreement:focus .checkbox-agreement{
+  outline: rgba(15, 84, 233, 0.664);
+}
+
+
+
+
 

@@ -224,21 +224,25 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-logo-contacts">
-        <a href="./index.html" class="link logo">
-          <span class="logo-part">Web</span>Studio</a>
-        <address class="address">
-          <ul class="ul contacts">
-            <li class="item studio-address">г. Киев, пр-т Леси Украинки, 26</li>
-            <li class="item">
-              <a class="link" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a>
-            </li>
-            <li class="item">
-              <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
-            </li>
-          </ul></div>
-          <div class="footer-social-icons"
-          > 
+          <a href="./index.html" class="link logo">
+            <span class="logo-part">Web</span>Studio</a
+          >
+          <address class="address">
+            <ul class="ul contacts">
+              <li class="item studio-address">
+                г. Киев, пр-т Леси Украинки, 26
+              </li>
+              <li class="item">
+                <a class="link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a>
+              </li>
+              <li class="item">
+                <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer-social-icons">
           <p class="title-footer-social-icons">присоединяйтесь</p>
           <ul class="ul footer-list-social-icons">
             <li class="footer-social-link-item">
@@ -270,9 +274,17 @@
               </a>
             </li>
           </ul>
-          </div>
-        </address>
-      </div>
+        </div>
+        <form class="form-footer">
+        <div class="form-footer-title-input"><b class="form-footer-title">Подпишитесь на рассылку</b>
+          <input class="form-footer-input" type="email" name="email-subscribe" id="id-email-subscribe" placeholder="E-mail">
+        </div>
+          <button type="submit" class="button-main" >Подписаться
+            <svg class="footer-icon-send" width="24" height="24">
+              <use href="./imeges/icons.svg#icon-send"></use>
+            </svg>
+          </button></div>
+        </form>
     </footer>
   </body>
 </html>
