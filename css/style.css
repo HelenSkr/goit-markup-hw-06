@@ -943,7 +943,12 @@ cursor: pointer;
   letter-spacing: 0.03em;
   line-height: 1.17;
 }
-/*.form-item-agreement input[type='checkbox']{
+.form-label-agreement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*стилизация встроенного чекбокса .form-item-agreement input[type='checkbox']{
   width: 40px;
   height: 40px;
 }*/
@@ -973,8 +978,8 @@ cursor: pointer;
 .icon-checkbox{
   display: block;
   margin-right: 8.38px;
-  width:21px;
-  height:20px;
+  width:16px;
+  height:15px;
   border: 2px solid #C4C4C4;
 }
 
@@ -982,14 +987,16 @@ cursor: pointer;
   transform: scale(1.2);
   border-color: transparent;
   border-radius: 2px;
-  width:21px;
-  height:20px;
+  width:14px;
+  height:13px;
   background-color: #0486f0ec;
   background-image: url('../imeges/check.svg');
   background-size: contain;
   background-origin: border-box;
   transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox-agreement:focus + .icon-checkbox{
-  outline: 3px solid rgba(4, 134, 240, 0.65) ;
+.checkbox-agreement:focus + .icon-checkbox,
+.checkbox-agreement:hover + .icon-checkbox{
+  border: 1px solid rgba(4, 134, 240, 0.65);
+  cursor: pointer;
 }
